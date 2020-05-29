@@ -20,6 +20,6 @@ app.use(express.json())
 app.get('/api/inventory', ctrl.getInventory)
 app.post('/api/product', ctrl.addProduct)
 app.put('/api/inventory:id', )
-app.delete('/api/inventory/:id', )
+app.delete('/api/product/:id', ctrl.deleteProduct)
 
 app.listen(SERVER_PORT, () => console.log(`Big Brother watching on:${SERVER_PORT}`))

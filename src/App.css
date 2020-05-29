@@ -1,7 +1,28 @@
 .App {
   text-align: center;
+}
+
+.body {
   display: flex;
-  justify-content: space-around;
+  margin-top: 10vh;
+  justify-content: space-evenly;
+}
+
+.header {
+  height: 10vh;
+  width: 100vw;
+  background-color: rgb(171,42,25);
+  text-align: left;
+  font-size: 24px;
+  color: white;
+}
+
+.shelfieImg {
+  margin-left: 100px;
+  margin-top: 20px;
+  height: 40px;
+  width: 40px;
+  margin-right: 50px;
 }
 
 .form {
@@ -43,13 +64,36 @@
 }
 
 .productImage {
-  width: 400px;
-  height: 200px;
-  object-fit: scale-down;
+  width: 250px;
+  height: 180px;
+  object-fit: contain;
   background-color: none;
+  float: left;
 }
 
 .productMain {
-  width: 600px;
-  height: 250px;
+  width: 470px;
+  height: 180px;
+  background-color: rgb(171,42,25);
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.productData {
+  display: flex;
+}
+
+.editDelete {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.editDeleteButton {
+  background-color: rgb(58,216,134);
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
 }

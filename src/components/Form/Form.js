@@ -7,7 +7,8 @@ constructor(){
   this.state = {
     name: '',
     price: 0,
-    imgurl: '',
+    image_url: '',
+    isEdit: false
   }
 }
 
@@ -19,7 +20,7 @@ setName(name) {
 
 setImgurl(imgurl) {
   this.setState({
-    imgurl: imgurl
+    image_url: imgurl
   })
 }
 
@@ -33,7 +34,7 @@ cancel() {
   this.setState({
     name: '',
     price: 0,
-    imgurl: ''
+    image_url: ''
   })
 }
 
@@ -41,7 +42,7 @@ addInventory() {
   const body = {
     name: this.state.name,
     price: this.state.price,
-    imgurl: this.state.imgurl
+    image_url: this.state.image_url
   }
   axios.post('/api/product', body)
   .then(this.props.getData(), this.cancel())
@@ -55,7 +56,7 @@ this.props.getData()
           <img alt='input preview' className = 'imgprev' src={this.state.imgurl}></img>
           <div className='formField'>
             Image URL:
-            <input type='text' value={this.state.imgurl} onChange={(e) => this.setImgurl(e.target.value)}></input>
+            <input type='text' value={this.state.image_url} onChange={(e) => this.setImgurl(e.target.value)}></input>
             Product Name:
             <input type='text' value={this.state.name} onChange={(e) => this.setName(e.target.value)}></input>
             Price:
